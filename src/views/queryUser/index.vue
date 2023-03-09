@@ -13,17 +13,17 @@
             {{ scope.row.eid }}
           </template>
         </el-table-column>
-        <el-table-column label="Title">
+        <el-table-column label="UserName">
           <template slot-scope="scope">
             {{ scope.row.title }}
           </template>
         </el-table-column>
-        <el-table-column label="Description">
+        <el-table-column label="Email">
           <template slot-scope="scope">
             {{ scope.row.detail }}
           </template>
         </el-table-column>
-        <el-table-column label="Zone">
+        <el-table-column label="Sex">
           <template slot-scope="scope">
             {{ scope.row.zone }}
           </template>
@@ -33,17 +33,17 @@
             {{ scope.row.time }}
           </template>
         </el-table-column>
-        <el-table-column label="Organizer" width="110" align="center">
+        <el-table-column label="Role" width="110" align="center">
           <template slot-scope="scope">
             <span>{{ scope.row.applyname }}</span>
           </template>
         </el-table-column>
-        <el-table-column class-name="status-col" label="Status" width="110" align="center">
+        <!-- <el-table-column class-name="status-col" label="Status" width="110" align="center">
           <template slot-scope="scope">
             <el-tag size="mini" v-if="scope.row.status===0" type="warning">Failed</el-tag>
             <el-tag size="mini" v-else-if="scope.row.status===1" type="success">Pass</el-tag>
           </template>
-        </el-table-column>
+        </el-table-column> -->
       </el-table>
     </div>
   </template>

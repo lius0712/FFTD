@@ -4,7 +4,7 @@ import 'nprogress/nprogress.css' // progress bar style
 import { getToken } from '@/utils/auth' // get token from cookie
 import getPageTitle from '@/utils/get-page-title'
 NProgress.configure({ showSpinner: false }) // NProgress Configuration
-const whiteList = ['/login', '/register', '/forgotPassword', '/ChangePassword', '/evaluateEventProposal', '/submitEventProposal']
+const whiteList = ['/login', '/register', '/forgotPassword', '/ChangePassword', '/ModifyRole', '/submitEventProposal','/queryUser', '/Event']
 router.beforeEach(async(to, from, next) => {
   // start progress bar
   NProgress.start()

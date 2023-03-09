@@ -93,7 +93,7 @@ export default {
                   type: "success",
                 });
           console.log(res.data)
-          this.$router.push({ path: '/evaluateEventProposal' })
+          this.$router.push({ path: '/ModifyRole' })
         }
       })
     }

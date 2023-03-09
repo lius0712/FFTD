@@ -13,32 +13,32 @@
           {{ scope.row.eid }}
         </template>
       </el-table-column>
-      <el-table-column label="Title">
+      <el-table-column label="UserName">
         <template slot-scope="scope">
           {{ scope.row.title }}
         </template>
       </el-table-column>
-      <el-table-column label="Description">
+      <el-table-column label="Email">
         <template slot-scope="scope">
           {{ scope.row.detail }}
         </template>
       </el-table-column>
-      <el-table-column label="Zone">
+      <el-table-column label="Sex">
         <template slot-scope="scope">
           {{ scope.row.zone }}
         </template>
       </el-table-column>
-      <el-table-column label="Time">
+      <el-table-column label="LoginTime">
         <template slot-scope="scope">
           {{ scope.row.time }}
         </template>
       </el-table-column>
-      <el-table-column label="Organizer" width="110" align="center">
+      <el-table-column label="Role" width="110" align="center">
         <template slot-scope="scope">
           <span>{{ scope.row.applyname }}</span>
         </template>
       </el-table-column>
-      <el-table-column class-name="status-col" label="Evaluate" width="110" align="center">
+      <el-table-column class-name="status-col" label="Modify" width="110" align="center">
         <template slot-scope="scope">
           <el-button type="warning" size="mini" icon="el-icon-error" circle @click="overrule(scope.row.title)"></el-button>
           <el-button type="success" size="mini" icon="el-icon-success" circle @click="pass(scope.row.title)"></el-button>
@@ -78,14 +78,14 @@ export default {
       })
     },
     overrule(title_value) {
-      this.axios.put('http://43.143.203.160:8080/event/', 'title=' + title_value + '&status=' + 0).then(res => {
+      this.axios.put('http://43.143.203.160:8080/event/', 'title=' + title_value + '&status=' + 0 + '&applyname=' + 'normal').then(res => {
         console.log(res.data)
       }).catch(err => {
         console.log(err)
       })
     },
     pass(title_value) {
-      this.axios.put('http://43.143.203.160:8080/event/', 'title=' + title_value + '&status=' + 1).then(res => {
+      this.axios.put('http://43.143.203.160:8080/event/', 'title=' + title_value + '&status=' + 1 + '&applyname=' + 'coordinator').then(res => {
         console.log(res.data)
       }).catch(err => {
         console.log(err)
