@@ -23,9 +23,10 @@
           {{ scope.row.detail }}
         </template>
       </el-table-column>
-      <el-table-column label="Sex">
+      <el-table-column label="Status">
         <template slot-scope="scope">
-          {{ scope.row.zone }}
+          <el-tag size="mini" v-if="scope.row.zone==='0'" type="warning">View Only</el-tag>
+          <el-tag size="mini" v-else-if="scope.row.zone==='1'" type="success">View and Write</el-tag>
         </template>
       </el-table-column>
       <el-table-column label="LoginTime">
