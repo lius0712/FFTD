@@ -79,6 +79,11 @@ export default {
     },
     overrule(title_value) {
       this.axios.put('http://43.143.203.160:8080/event/', 'title=' + title_value + '&status=' + 0 + '&applyname=' + 'normal').then(res => {
+        this.$message({
+                  showClose: true,
+                  message: "modify role to normal successfully, please refresh page!",
+                  type: "success",
+        });
         console.log(res.data)
       }).catch(err => {
         console.log(err)
@@ -86,6 +91,11 @@ export default {
     },
     pass(title_value) {
       this.axios.put('http://43.143.203.160:8080/event/', 'title=' + title_value + '&status=' + 1 + '&applyname=' + 'coordinator').then(res => {
+        this.$message({
+                  showClose: true,
+                  message: "modify role to coordinator successfully, please refresh page!",
+                  type: "success",
+                });
         console.log(res.data)
       }).catch(err => {
         console.log(err)
