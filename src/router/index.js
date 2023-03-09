@@ -64,6 +64,44 @@ export const constantRoutes = [
     path: '/',
     component: Layout,
     redirect: '/evaluateEventProposal',
+    name: '',
+    meta: { title: 'evaluateEventProposal', icon: 'el-icon-s-help' },
+    children: [
+      {
+        path: 'evaluateEventProposal',
+        name: 'evaluateEventProposal',
+        component: () => import('@/views/evaluateEventProposal/index'),
+        meta: { title: 'evaluateEventProposal', icon: 'form' }
+      }
+    ]
+  },
+  {
+    path: '/Event',
+    component: Layout,
+    redirect: '/Event',
+    children: [{
+      path: 'Event',
+      name: 'Event',
+      component: () => import('@/views/Event/index'),
+      meta: { title: 'Event', icon: 'form' }
+    }]
+  },
+  {
+    path: '/evaluateEventProposal',
+    component: Layout,
+    children: [
+      {
+        path: 'index',
+        name: 'submitEventProposal',
+        component: () => import('@/views/submitEventProposal/index'),
+        meta: { title: 'submitEventProposal', icon: 'form' }
+      }
+    ]
+  },
+  {
+    path: '/Event/evaluateEventProposal',
+    component: Layout,
+    redirect: '/Event/evaluateEventProposal',
     // name: '',
     // meta: { title: 'evaluateEventProposal', icon: 'el-icon-s-help' },
     children: [
@@ -75,44 +113,6 @@ export const constantRoutes = [
       }
     ]
   },
-  // {
-  //   path: '/Event',
-  //   component: Layout,
-  //   redirect: '/Event',
-  //   children: [{
-  //     path: 'Event',
-  //     name: 'Event',
-  //     component: () => import('@/views/Event/index'),
-  //     meta: { title: 'Event', icon: 'form' }
-  //   }]
-  // },
-  // {
-  //   path: '/evaluateEventProposal',
-  //   component: Layout,
-  //   children: [
-  //     {
-  //       path: 'index',
-  //       name: 'submitEventProposal',
-  //       component: () => import('@/views/submitEventProposal/index'),
-  //       meta: { title: 'submitEventProposal', icon: 'form' }
-  //     }
-  //   ]
-  // },
-  // {
-  //   path: '/Event/evaluateEventProposal',
-  //   component: Layout,
-  //   redirect: '/Event/evaluateEventProposal',
-  //   // name: '',
-  //   // meta: { title: 'evaluateEventProposal', icon: 'el-icon-s-help' },
-  //   children: [
-  //     {
-  //       path: 'evaluateEventProposal',
-  //       name: 'evaluateEventProposal',
-  //       component: () => import('@/views/evaluateEventProposal/index'),
-  //       meta: { title: 'evaluateEventProposal', icon: 'form' }
-  //     }
-  //   ]
-  // },
   {
     path: '/',
     component: Layout,
