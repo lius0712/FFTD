@@ -75,6 +75,20 @@ export const constantRoutes = [
       }
     ]
   },
+  {
+    path: '/',
+    component: Layout,
+    redirect: '/Family',
+    name: '',
+    children: [
+      {
+        path: 'Family',
+        name: 'Family',
+        component: () => import('@/views/Family/index'),
+        meta: { title: 'Family', icon: 'form' }
+      }
+    ]
+  },
   // {
   //   path: '/Event',
   //   component: Layout,
