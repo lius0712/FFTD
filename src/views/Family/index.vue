@@ -27,16 +27,16 @@
       return {
         landscape: [],
         data: {
-          name: 'root',
+          name: 'qwe',
           image_url: "https://static.refined-x.com/static/avatar.jpg",
           class: ["rootNode"],
           children: [
             {
-              name: 'children1',
+              name: 'test1',
               image_url: "https://static.refined-x.com/static/avatar.jpg"
             },
             {
-              name: 'children2',
+              name: 'test2',
               image_url: "https://static.refined-x.com/static/avatar.jpg",
               // mate: [
               //   {
@@ -46,15 +46,15 @@
               // ],
               children: [
                 {
-                  name: 'grandchild',
+                  name: 'test3',
                   image_url: "https://static.refined-x.com/static/avatar.jpg"
                 },
                 {
-                  name: 'grandchild2',
+                  name: 'test4',
                   image_url: "https://static.refined-x.com/static/avatar.jpg"
                 },
                 {
-                  name: 'grandchild3',
+                  name: '1234',
                   image_url: "https://static.refined-x.com/static/avatar.jpg"
                 }
               ]
