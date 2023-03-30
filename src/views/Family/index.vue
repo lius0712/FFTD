@@ -1,9 +1,9 @@
 <template>
     <div id="app">
-      <label>
+      <!-- <label>
         <input type="checkbox" v-model="landscape" value="0">
-      </label>
-      <TreeChart :json="data" :class="{landscape: landscape.length}" @click-node="clickNode" />
+      </label> -->
+      <TreeChart :json="data" :class="{landscape: 1}" @click-node="clickNode" />
       <div class="gl_prs_ctn" :style='[contextstyle]'>
           <ul class='gl_prs_li'>
               <li >add</li>
